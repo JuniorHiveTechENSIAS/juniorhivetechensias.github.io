@@ -395,6 +395,7 @@ body{
 
 .testimonial-carousel .owl-item .testimonial-item {
     transition: .5s;
+    height: 480px;
 }
 
 .testimonial-carousel .owl-item.center .testimonial-item {
