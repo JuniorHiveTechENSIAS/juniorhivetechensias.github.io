@@ -176,8 +176,8 @@ body{
     }
     .sticky-top.navbar-dark{
         position: fixed;
-        -webkit-backdrop-filter: blur(20px);
-        backdrop-filter: blur(20px);
+        /* -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px); */
         background-color: var(--light);
     }
     .sticky-top.navbar-dark .navbar-nav .nav-link {
@@ -216,6 +216,10 @@ body{
 
 
 /*** Carousel ***/
+
+.carousel-item{
+    height: 100vh;
+}
 .carousel-caption {
     top: 0;
     left: 0;
@@ -236,6 +240,9 @@ body{
 }
 .carousel-caption h2 span{
     color: var(--primary);
+}
+.carousel-caption .btn{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 576px) {
