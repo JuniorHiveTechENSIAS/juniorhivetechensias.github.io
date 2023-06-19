@@ -38,6 +38,10 @@
     transition: color 0.3s ease-out;
 }
   
+.service-body .read-more{
+    position: absolute;
+    bottom: 10px;
+}
 .service-body .tags{
     display: flex;
     justify-content: start;
