@@ -71,7 +71,7 @@ body{
 
 /*** Button ***/
 .btn {
-    font-family: 'Libre Baskerville', sans-serif;
+    /* font-family: 'Libre Baskerville', sans-serif; */
     font-weight: 600;
     transition: .5s;
 }
@@ -116,10 +116,12 @@ body{
 /*Navbar*/
 
 .navbar-dark .navbar-nav .nav-link {
+    /* 
     font-family: 'Khyay', sans-serif;
     font-style: normal;
+    */
+    font-weight: 500;
     font-size: 16px;
-    font-weight: 600;
     line-height: 22px;
     text-transform: uppercase;
     position: relative;
@@ -230,11 +232,11 @@ body{
 }
 
 .carousel-caption h5{
-    font-family: 'Libre Baskerville';
+    /* font-family: 'Libre Baskerville'; */
     font-weight: 200;
 }
 .carousel-caption h2{
-    font-family: 'Libre Baskerville';
+    /* font-family: 'Libre Baskerville'; */
     font-weight: 400;
     font-size: 50px;
 }
@@ -249,13 +251,11 @@ body{
     .carousel-caption h5 {
         font-size: 14px;
         font-weight: 100 !important;
-        font-family: 'Libre Baskerville';
     }
 
     .carousel-caption h2 {
         font-size: 30px;
         font-weight: 300 !important;
-        font-family: 'Libre Baskerville';
     }
 }
 
@@ -409,7 +409,8 @@ body{
 
 .testimonial-carousel .owl-item .testimonial-item {
     transition: .5s;
-    height: 480px;
+    height: 560px;
+    text-align: center;
 }
 
 .testimonial-carousel .owl-item.center .testimonial-item {
