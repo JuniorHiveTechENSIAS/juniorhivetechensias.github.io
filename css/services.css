@@ -19,6 +19,7 @@
     padding: 0;
     aspect-ratio: 16 / 9;
     overflow: hidden;
+    background-color: bisque;
 }
   
 .service-wrapper img {
@@ -38,10 +39,6 @@
     transition: color 0.3s ease-out;
 }
   
-.service-body .read-more{
-    position: absolute;
-    bottom: 10px;
-}
 .service-body .tags{
     display: flex;
     justify-content: start;
@@ -58,6 +55,13 @@
     padding: 2px 8px;
 }
 
+.service-body p{
+    margin-bottom: 30px;
+}
+.service-body .read-more{
+    position: absolute;
+    bottom: 10px;
+}
 .service-body a {
     display: inline-flex;
     align-items: center;
