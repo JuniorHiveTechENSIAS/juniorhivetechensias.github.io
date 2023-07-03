@@ -3,7 +3,7 @@ function filterSelection(tag) {
     var x = document.getElementsByClassName("service-card");
 
     //if tag is all, show all service cards
-    if (tag == "all") {
+    if (tag == "All") {
         for (var i = 0; i < x.length; i++) {
             x[i].parentElement.style.display = "block";
         }
@@ -46,5 +46,7 @@ window.addEventListener('load', () => {
     //window.location.search = '';
     const urlParams = new URLSearchParams(queryString);
     const tag = urlParams.get('tag');
-    filterSelection(tag);
+    if (tag) {
+        filterSelection(tag);
+    }
 });
