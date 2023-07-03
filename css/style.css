@@ -342,6 +342,7 @@ body{
     height: 300px;
     padding: 0 30px;
     transition: .5s;
+    background-color: rgba(228, 228, 228, 0.3) !important;
 }
 
 .service-item .service-icon {
@@ -411,6 +412,7 @@ body{
     transition: .5s;
     height: 560px;
     text-align: center;
+    background-color: rgba(228, 228, 228, 0.3) !important;
 }
 
 .testimonial-carousel .owl-item.center .testimonial-item {
@@ -485,6 +487,9 @@ body{
     transform: scale(1.15);
 }
 
+.contact-form input, .contact-form textarea {
+    background-color: rgba(228, 228, 228, 0.3) !important;
+}
 
 /*** Miscellaneous ***/
 @media (min-width: 991.98px) {

@@ -81,8 +81,18 @@
                 <h5 class="fw-bold text-primary text-uppercase">Our Services</h5>
                 <h1 class="mb-0">Custom IT Solutions for Your Successful Business</h1>
             </div>
-            <div class="row g-5">
-                <div class="col-lg-4 col-md-6 wow zoomIn">
+            <div id="selectors" class="selectors">
+                <button class="btn btn-filter" onclick="filterSelection('all')">All</button>
+                <button class="btn btn-filter" onclick="filterSelection('UI/UX')">UI/UX</button>
+                <button class="btn btn-filter" onclick="filterSelection('Web Dev')">Web Dev</button>
+                <button class="btn btn-filter" onclick="filterSelection('Mobile Dev')">Mobile Dev</button>
+                <button class="btn btn-filter" onclick="filterSelection('IoT')">IoT</button>
+                <button class="btn btn-filter" onclick="filterSelection('AI')">AI</button>
+                <button class="btn btn-filter" onclick="filterSelection('Data Scraping')">Data Scraping</button>
+                <button class="btn btn-filter" onclick="filterSelection('Financial Data Analysis')">Financial Data Analysis</button>
+              </div>
+            <div class="row g-5 wow zoomIn">
+                <div class="col-lg-4 col-md-6">
                     <article class="service-card">
                         <div class="service-wrapper">
                           <figure>
@@ -97,7 +107,7 @@
                                 Start2Fund is a project developed for the Fintech Hackathon 2023 held in the National School of Computer Science and Systems Analysis - Rabat, Morocco. It is a web platform designed to connect startups with potential investors by providing an intuitive user interface and user experience that matches startups with investors who are interested in their industry and funding needs.
                             </p>
                             <a target="_blank" href="https://dribbble.com/shots/20957314-Start2Fund-Startup-and-Investor-Matching-Platform?fbclid=IwAR3nJwxqoryprldS1BA33rarxfCVBN1nK_tx1I92Re7mcaJJeSJghfSEo-o" class="read-more">
-                                Read more
+                                Project link
                               <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                               </svg>
@@ -106,7 +116,56 @@
                         </div>
                     </article>
                 </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn">
+                <div class="col-lg-4 col-md-6">
+                    <article class="service-card">
+                        <div class="service-wrapper">
+                          <figure>
+                            <img src="./img/sgconnect.png" class="img-fluid" alt="start2fund" />
+                          </figure>
+                          <div class="service-body">
+                            <h2>SG CONNECT</h2>
+                            <div class="tags">
+                                <div class="tag">Web Dev</div>
+                                <div class="tag">Mobile Dev</div>
+                            </div>
+                            <p>
+                                SG CONNECTE is a web and mobile application dedicated to Societe Generale bank customers located in the sub-Saharan African zone, it offers customers several services (access to the bank account, consultation of transactions linked to each bank account, consultation of the various payment cards of the customer, credit simulators, product consultation, etc.)
+                            </p>
+                            <a target="_blank" href="https://connect-hf.societegenerale.bf/login" class="read-more">
+                                Project link
+                              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <article class="service-card">
+                        <div class="service-wrapper">
+                          <figure>
+                            <img src="./img/ibnghazi.png" class="img-fluid" alt="start2fund" />
+                          </figure>
+                          <div class="service-body">
+                            <h2>Ibnghazi Academic Platform</h2>
+                            <div class="tags">
+                                <div class="tag">Web Dev</div>
+                            </div>
+                            <p>
+                                Ibnghazi is a private school that offers CPGE training, this project represents its academic platform composed of several pages and sections (newsroom, campus, events, application form, presentation of training, presentation of figures, connection ...)
+                            </p>
+                            <a target="_blank" href="https://connect-hf.societegenerale.bf/login" class="read-more">
+                                Project link
+                              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6">
                     <article class="service-card">
                         <div class="service-wrapper">
                           <figure>
@@ -115,17 +174,15 @@
                           <div class="service-body">
                             <h2>Chatbot SART</h2>
                             <div class="tags">
-                                <div class="tag">AI</div>
-                                <div class="tag">ML</div>
+                                <div class="tag">Chatbots</div>
                                 <div class="tag">NLP</div>
-                                <div class="tag">ASR</div>
-                                <div class="tag">RASA</div>
+                                <div class="tag">AI</div>
                             </div>
                             <p>
                                 Chatbot SART "Style Assistant and Retail Technology" is a chatbot that assists users with their inventory management needs, providing information on available products, stock levels, orders, etc. It uses artificial intelligence, speech recognition, speech synthesis and natural language processing techniques to intuitively interact with users.
                             </p>
                             <a target="_blank" href="https://github.com/ahmedidrissi/chatbot-SART/" class="read-more">
-                              Read more <span class="sr-only">about this is some title</span>
+                              Project link <span class="sr-only">about this is some title</span>
                               <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                               </svg>
@@ -134,7 +191,59 @@
                         </div>
                     </article>
                 </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn">
+                <div class="col-lg-4 col-md-6">
+                    <article class="service-card">
+                        <div class="service-wrapper">
+                          <figure>
+                            <img src="" class="img-fluid" alt="" />
+                          </figure>
+                          <div class="service-body">
+                            <h2>SmartPark</h2>
+                            <div class="tags">
+                                <div class="tag">Web Dev</div>
+                                <div class="tag">Mobile Dev</div>
+                                <div class="tag">IoT</div>
+                                <div class="tag">ML</div>
+                                <div class="tag">AI</div>
+                            </div>
+                            <p>
+                                A netflix clone using nextjs, tailwind, prisma and mongodb.
+                            </p>
+                            <a target="_blank" href="" class="read-more">
+                                Project link
+                              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <article class="service-card">
+                        <div class="service-wrapper">
+                          <figure>
+                            <img src="./img/netflix-clone2.jpeg" class="img-fluid" alt=""/>
+                          </figure>
+                          <div class="service-body">
+                            <h2>Netflix Clone2</h2>
+                            <div class="tags">
+                                <div class="tag">Web Dev</div>
+                            </div>
+                            <p>
+                                A netflix clone using nextjs, tailwind, prisma and mongodb.
+                            </p>
+                            <a target="_blank" href="" class="read-more">
+                                Project link
+                              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6">
                     <article class="service-card">
                         <div class="service-wrapper">
                           <figure>
@@ -144,13 +253,13 @@
                             <h2>Scientific Articles Web App</h2>
                             <div class="tags">
                                 <div class="tag">Web Dev</div>
-                                <div class="tag">Web Scraping</div>
+                                <div class="tag">Data Scraping</div>
                             </div>
                             <p>
                                 A website for consulting scientific articles. The main objective is to provide users with a user-friendly platform to explore and search for the latest scientific articles. The site allows users to filter articles by author and publication date, making it easy to find relevant research. Data is retrieved from an external API, ensuring the timeliness and accuracy of the information displayed.
                             </p>
                             <a target="_blank" href="" class="read-more">
-                                Read more
+                                Project link
                               <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                               </svg>
@@ -159,7 +268,7 @@
                         </div>
                     </article>
                 </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn">
+                <div class="col-lg-4 col-md-6">
                     <article class="service-card">
                         <div class="service-wrapper">
                           <figure>
@@ -169,7 +278,6 @@
                             <h2>Project Management Platform</h2>
                             <div class="tags">
                                 <div class="tag">Web Dev</div>
-                                <div class="tag">Laravel</div>
                             </div>
                             <p>
                             Development of an employee management platform to generate their sheets, 
@@ -178,7 +286,7 @@
                             In addition, the platform will send emails and notifications in the event of urgent deadlines.
                             </p>
                             <a target="_blank" href="" class="read-more">
-                                Read more
+                                Project link
                               <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                               </svg>
@@ -187,27 +295,51 @@
                         </div>
                     </article>
                 </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn">
+                <div class="col-lg-4 col-md-6">
                     <article class="service-card">
                         <div class="service-wrapper">
                           <figure>
                             <img src="" class="img-fluid" alt="" />
                           </figure>
                           <div class="service-body">
-                            <h2>Sports room management platform</h2>
+                            <h2>Photos recognition on a student ID</h2>
                             <div class="tags">
-                                <div class="tag">Web Dev</div>
-                                <div class="tag">Laravel</div>
+                                <div class="tag">AI</div>
+                                <div class="tag">DL</div>
                             </div>
                             <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, earum possimus! Eligendi, debitis voluptatum quae iste quasi assumenda accusamus itaque dolorum voluptatibus fugiat corrupti sapiente dolores nostrum praesentium atque repudiandae!
+                                In this project, images on a student ID card will be recognized using deep learning algorithms. The objective is to create an algorithm that can correctly identify people from the images on their identification cards. Many different applications, including security and access control systems in educational institutions, may benefit from this. The deep learning method entails teaching a neural network to distinguish various people based on their ID card photographs utilizing a vast amount of labeled data. The resulting algorithm can then be used to instantly and automatically identify people.
                             </p>
-                            <a target="_blank" href="https://github.com/HossameTor/GymSiaS" class="read-more">
-                                Read more
+                            <a target="_blank" href="https://github.com/zacharyb02/Photos-recognition-on-a-student-ID" class="read-more">
+                                Project link
                               <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                               </svg>
                             </a>
+                          </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <article class="service-card">
+                        <div class="service-wrapper">
+                          <figure>
+                            <img src="" class="img-fluid" alt="" />
+                          </figure>
+                          <div class="service-body">
+                            <h2>Analysis of financial data for the Casablanca Stock Exchange</h2>
+                            <div class="tags">
+                                <div class="tag">Financial Data Analysis</div>
+                            </div>
+                            <p>
+                                Provide management with a dashboard summarizing information relating to the microstructure of the market and a system for detecting potential market manipulation.
+                            </p>
+                            <!-- <a target="_blank" href="" class="read-more">
+                                Project link
+                              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                              </svg>
+                            </a> -->
                           </div>
                         </div>
                     </article>
@@ -285,7 +417,7 @@
             </div>
             <div class="row g-5">
                 <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
-                    <form action="https://formsubmit.co/88c4338111b0e709d4e848886a805ddb" method="POST">
+                    <form class="contact-form" action="https://formsubmit.co/88c4338111b0e709d4e848886a805ddb" method="POST">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <input type="text" class="form-control border-0 bg-light px-4" placeholder="Your Name" style="height: 55px;" required>
@@ -362,6 +494,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/service.js"></script>
 </body>
 
 </html>
