@@ -31,6 +31,7 @@ const select = (el, all = false) => {
    * Porfolio isotope and filter
    */
 window.addEventListener('load', () => {
+
     let portfolioContainer = select('.portfolio-container');
     if (portfolioContainer) {
       let portfolioIsotope = new Isotope(portfolioContainer, {
@@ -53,6 +54,24 @@ window.addEventListener('load', () => {
         //   AOS.refresh()
         // });
       }, true);
+        var queryString = window.location.search;
+        var urlParams = new URLSearchParams(queryString);
+        var tag = urlParams.get('tag');
+        window.history.replaceState({}, document.title, "/" + "service.html");
+        if (tag) {      
+            tag = '.filter-' + tag;
+
+            portfolioFilters.forEach(function(el) {
+                el.classList.remove('filter-active');
+              });
+
+            var filterActive = document.querySelector('[data-filter="' + tag + '"]');
+            filterActive.classList.add('filter-active');
+
+            portfolioIsotope.arrange({
+                filter: tag
+            });
+        }
     }
 
 });
