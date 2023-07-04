@@ -73,26 +73,29 @@
     </div>
     <!-- Navbar & Carousel End -->
 
-
-    <!-- Service Start -->
-    <div id="services" class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <!-- Portfolio Start -->
+    <div id="portfolio" class="portfolio section-bg">
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
                 <h5 class="fw-bold text-primary text-uppercase">Our Services</h5>
                 <h1 class="mb-0">Custom IT Solutions for Your Successful Business</h1>
             </div>
-            <div id="selectors" class="selectors">
-                <button class="btn btn-filter" onclick="filterSelection('All')">All</button>
-                <button class="btn btn-filter" onclick="filterSelection('UI/UX')">UI/UX</button>
-                <button class="btn btn-filter" onclick="filterSelection('Web Dev')">Web Dev</button>
-                <button class="btn btn-filter" onclick="filterSelection('Mobile Dev')">Mobile Dev</button>
-                <button class="btn btn-filter" onclick="filterSelection('IoT')">IoT</button>
-                <button class="btn btn-filter" onclick="filterSelection('AI')">AI</button>
-                <button class="btn btn-filter" onclick="filterSelection('Data Scraping')">Data Scraping</button>
-                <button class="btn btn-filter" onclick="filterSelection('Financial Data Analysis')">Financial Data Analysis</button>
-              </div>
-            <div class="row g-5 wow zoomIn">
-                <div class="col-lg-4 col-md-6">
+            <div class="row" data-aos="fade-up">
+                <div class="col-lg-12 d-flex justify-content-center">
+                  <ul id="portfolio-flters">
+                    <li data-filter="*" class="filter-active">All</li>
+                    <li data-filter=".filter-ui-ux">UI/UX</li>
+                    <li data-filter=".filter-web">Web</li>
+                    <li data-filter=".filter-mobile">Mobile</li>
+                    <li data-filter=".filter-ai">AI</li>
+                    <li data-filter=".filter-data">Data</li>
+                    <li data-filter=".filter-iot">IoT</li>
+                  </ul>
+                </div>
+            </div>
+            <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-ui-ux">
                     <article class="service-card">
                         <div class="service-wrapper">
                           <figure>
@@ -115,8 +118,8 @@
                           </div>
                         </div>
                     </article>
-                </div>
-                <div class="col-lg-4 col-md-6">
+                </div>  
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-mobile">
                     <article class="service-card">
                         <div class="service-wrapper">
                           <figure>
@@ -140,8 +143,8 @@
                           </div>
                         </div>
                     </article>
-                </div>
-                <div class="col-lg-4 col-md-6">
+                </div> 
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                     <article class="service-card">
                         <div class="service-wrapper">
                           <figure>
@@ -164,8 +167,8 @@
                           </div>
                         </div>
                     </article>
-                </div>
-                <div class="col-lg-4 col-md-6">
+                </div> 
+                <div class="col-lg-4 col-md-6 portfolio-item filter-ai">
                     <article class="service-card">
                         <div class="service-wrapper">
                           <figure>
@@ -190,8 +193,8 @@
                           </div>
                         </div>
                     </article>
-                </div>
-                <div class="col-lg-4 col-md-6">
+                </div> 
+                <div class="col-lg-4 col-md-6 portfolio-item filter-iot filter-mobile filter-web filter-ai">
                     <article class="service-card">
                         <div class="service-wrapper">
                           <figure>
@@ -219,7 +222,7 @@
                         </div>
                     </article>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                     <article class="service-card">
                         <div class="service-wrapper">
                           <figure>
@@ -242,8 +245,8 @@
                           </div>
                         </div>
                     </article>
-                </div>
-                <div class="col-lg-4 col-md-6">
+                </div> 
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-data">
                     <article class="service-card">
                         <div class="service-wrapper">
                           <figure>
@@ -267,8 +270,8 @@
                           </div>
                         </div>
                     </article>
-                </div>
-                <div class="col-lg-4 col-md-6">
+                </div> 
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                     <article class="service-card">
                         <div class="service-wrapper">
                           <figure>
@@ -294,8 +297,8 @@
                           </div>
                         </div>
                     </article>
-                </div>
-                <div class="col-lg-4 col-md-6">
+                </div> 
+                <div class="col-lg-4 col-md-6 portfolio-item filter-ai">
                     <article class="service-card">
                         <div class="service-wrapper">
                           <figure>
@@ -320,7 +323,7 @@
                         </div>
                     </article>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 portfolio-item filter-data">
                     <article class="service-card">
                         <div class="service-wrapper">
                           <figure>
@@ -344,10 +347,12 @@
                         </div>
                     </article>
                 </div>
+
+      
             </div>
         </div>
     </div>
-    <!-- Service End -->
+    <!-- Portfolio End -->
 
 
 
@@ -491,6 +496,7 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope-layout/isotope.pkgd.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
