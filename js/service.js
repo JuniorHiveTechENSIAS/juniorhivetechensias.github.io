@@ -1,52 +1,60 @@
-function filterSelection(tag) {
-    // select all service cards
-    var x = document.getElementsByClassName("service-card");
+(function() {
+    "use strict";
 
-    //if tag is all, show all service cards
-    if (tag == "All") {
-        for (var i = 0; i < x.length; i++) {
-            x[i].parentElement.style.display = "block";
-        }
-        return;
+/**
+   * Easy selector helper function
+   */
+const select = (el, all = false) => {
+    el = el.trim()
+    if (all) {
+      return [...document.querySelectorAll(el)]
+    } else {
+      return document.querySelector(el)
     }
-    // loop through all service cards and get tag elements
-    for (var i = 0; i < x.length; i++) {
-        var tags = x[i].getElementsByClassName("tag");
-        var found = false;
-        // loop through all tags of the current service card
-        for (var j = 0; j < tags.length; j++) {
-            // if the tag is the same as the filter tag, show the service card
-            if (tags[j].innerHTML == tag) {
-                found = true;
-                break;
-            }
-        }
-        // if the tag is not the same as the filter tag, hide the service card
-        if (!found) {
-            x[i].parentElement.style.display = "none";
-        } else {
-            x[i].parentElement.style.display = "block";
-        }
+  }
+
+  /**
+   * Easy event listener function
+   */
+  const on = (type, el, listener, all = false) => {
+    let selectEl = select(el, all)
+    if (selectEl) {
+      if (all) {
+        selectEl.forEach(e => e.addEventListener(type, listener))
+      } else {
+        selectEl.addEventListener(type, listener)
+      }
     }
-}
+  }
 
-// Add active class to the current control button (highlight it)
-var btnContainer = document.getElementById("selectors");
-var btns = btnContainer.getElementsByClassName("btn-filter");
-for (var i = 0; i < btns.length; i++) {
-btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].classList.remove("active");
-    this.classList.add("active");
-});
-}  
-
+/**
+   * Porfolio isotope and filter
+   */
 window.addEventListener('load', () => {
-    const queryString = window.location.search;
-    //window.location.search = '';
-    const urlParams = new URLSearchParams(queryString);
-    const tag = urlParams.get('tag');
-    if (tag) {
-        filterSelection(tag);
+    let portfolioContainer = select('.portfolio-container');
+    if (portfolioContainer) {
+      let portfolioIsotope = new Isotope(portfolioContainer, {
+        itemSelector: '.portfolio-item'
+      });
+
+      let portfolioFilters = select('#portfolio-flters li', true);
+
+      on('click', '#portfolio-flters li', function(e) {
+        e.preventDefault();
+        portfolioFilters.forEach(function(el) {
+          el.classList.remove('filter-active');
+        });
+        this.classList.add('filter-active');
+
+        portfolioIsotope.arrange({
+          filter: this.getAttribute('data-filter')
+        });
+        // portfolioIsotope.on('arrangeComplete', function() {
+        //   AOS.refresh()
+        // });
+      }, true);
     }
+
 });
+
+})()

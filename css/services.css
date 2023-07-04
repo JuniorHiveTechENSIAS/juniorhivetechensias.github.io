@@ -1,27 +1,45 @@
-.selectors {
-    background-color: rgba(228, 228, 228, 0.3);
-    border-radius: 10px;
-    margin-bottom: 25px;
+.portfolio .portfolio-item {
+    margin-bottom: 30px;
 }
-
-.selectors button{
-    margin: 0;
-    padding-right: 15px;
-    border: none;
-    outline: none;
-    border-right: 1px solid rgba(203, 203, 203, 0.4);
+  
+.portfolio #portfolio-flters {
+    padding: 0;
+    margin: 0 auto 35px auto;
+    list-style: none;
+    text-align: center;
+    background: rgba(228, 228, 228, 0.3);
+    border-radius: 50px;
+    padding: 2px 15px;
 }
-
-.selectors button:hover{
+  
+.portfolio #portfolio-flters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 15px 8px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #272829;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+}
+  
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
     color: #ff9b1b;
 }
-
-.selectors button:focus{
-    box-shadow: none;
+  
+.portfolio #portfolio-flters li:last-child {
+    margin-right: 0;
 }
 
-.selectors button.active{
-    color: #ff9b1b;
+article:has(:hover, :focus) {
+    --img-scale: 1.1;
+    --title-color: #ff9b1b;
+    --link-icon-translate: 0;
+    --link-icon-opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .service-card {
@@ -114,10 +132,8 @@
     transition: all 0.3s;
 }
 
-article:has(:hover, :focus) {
-    --img-scale: 1.1;
-    --title-color: #ff9b1b;
-    --link-icon-translate: 0;
-    --link-icon-opacity: 1;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-}
+
+
+
+  
+  
