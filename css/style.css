@@ -410,7 +410,7 @@ body{
 
 .testimonial-carousel .owl-item .testimonial-item {
     transition: .5s;
-    height: 560px;
+    height: 600px;
     text-align: center;
     background-color: rgba(228, 228, 228, 0.3) !important;
 }
