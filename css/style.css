@@ -164,6 +164,7 @@ body{
 
     .navbar-dark .navbar-brand .hive-logo{
         fill: var(--primary);
+        height: 30px;
     }
 }
 
