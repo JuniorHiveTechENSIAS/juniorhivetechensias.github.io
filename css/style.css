@@ -20,6 +20,10 @@ body{
     background-color: var(--light);
 }
 
+.rounded {
+    border-radius: 8px !important;
+}
+
 @font-face {
     font-family: 'Libre Baskerville';
     font-style: normal;
@@ -84,6 +88,7 @@ body{
     /* font-family: 'Libre Baskerville', sans-serif; */
     font-weight: 600;
     transition: .5s;
+    border-radius: 8px;
 }
 
 .btn-primary,
@@ -238,7 +243,7 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(26, 14, 0, 0.4);
+    background: rgba(19, 10, 0, 0.6);
     z-index: 1;
 }
 
@@ -517,6 +522,7 @@ body{
     right: 45px;
     bottom: 45px;
     z-index: 99;
+    color: #fff !important;
 }
 
 .back-to-top:focus{
@@ -527,6 +533,14 @@ body{
 .back-to-top:hover{
     border: none;
     box-shadow: none;
+}
+
+@media (max-width: 991.98px) {
+    .back-to-top {
+        right: 20px;
+        bottom: 20px;
+        scale: .9;
+    }
 }
 
 .bg-header {
